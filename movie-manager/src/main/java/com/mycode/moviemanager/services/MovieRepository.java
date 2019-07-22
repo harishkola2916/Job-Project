@@ -15,7 +15,10 @@ import com.mycode.moviemanager.model.Movie;
  *
  */
 @Repository
-public interface MovieRepository extends MongoRepository<Movie, String> {
+public interface MovieRepository
+		extends
+			MongoRepository<Movie, String>,
+			MovieRepositoryCustom {
 	Movie findBy_id(ObjectId _id);
 
 	@Query("{title : ?0}")

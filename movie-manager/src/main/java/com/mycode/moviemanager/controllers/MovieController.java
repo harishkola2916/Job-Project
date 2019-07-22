@@ -55,6 +55,7 @@ public class MovieController {
 	public void updateMovieById(@PathVariable("id") ObjectId id,
 			@Valid @RequestBody Movie movie) {
 		movie.set_id(id);
-		movieRepo.save(movie);
+		movieRepo.updateTitle(id, movie);
+		// movieRepo.save(movie);
 	}
 }
