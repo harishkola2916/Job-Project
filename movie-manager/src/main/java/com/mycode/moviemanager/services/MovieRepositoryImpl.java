@@ -33,7 +33,6 @@ public class MovieRepositoryImpl implements MovieRepositoryCustom {
 	 */
 	@Override
 	public void updateTitle(ObjectId id, Movie movie) {
-		// TODO Auto-generated method stub
 		Query query = new Query();
 		query.addCriteria(Criteria.where("_id").is(id));
 		query.fields().include("_id");
