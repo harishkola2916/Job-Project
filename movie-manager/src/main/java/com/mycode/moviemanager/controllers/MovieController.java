@@ -33,18 +33,18 @@ public class MovieController {
 	@Autowired
 	private MovieRepository movieRepo;
 
-	@GetMapping(value = "/movies", params = "id")
+	@GetMapping(value = "/moviesById", params = "id")
 	public Movie getMovieById(@RequestParam(name = "id") ObjectId id) {
 		return movieRepo.findBy_id(id);
 	}
 
-	@GetMapping(value = "/movies", params = "title")
+	@GetMapping(value = "/moviesByTitle", params = "title")
 	public Movie getMovieByTitle(@RequestParam(name = "title") String title) {
 		return movieRepo.findByTitle(title);
 	}
 
 	@GetMapping(value = "/movies")
-	public List<Movie> getMovies() {
+	public List<Movie> getAllMovies() {
 		return movieRepo.findAll();
 	}
 
