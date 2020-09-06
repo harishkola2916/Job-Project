@@ -23,7 +23,7 @@ import com.mycode.moviemanager.services.MovieRepository;
 
 /**
  * @author haree
- * @param <Movie>
+ * @param {@link Movie}
  *
  */
 @RestController
